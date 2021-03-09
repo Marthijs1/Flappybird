@@ -49,14 +49,18 @@ namespace Flappybird
             Flappybird.Top += gravity;
             Pipedown.Left -= pipespeed;
             Pipetop.Left -= pipespeed;
+            Score.Text = score.ToString();
 
             if (Pipedown.Left <-50)
             {
                 Pipedown.Left = 800;
-            }
+                score++;
+              }
+             
             if(Pipetop.Left < -80)
             {
                 Pipetop.Left = 950;
+                score++;
             }
 
         }
@@ -65,7 +69,7 @@ namespace Flappybird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -5;
+                gravity = -10;
             }
 
 
@@ -75,8 +79,15 @@ namespace Flappybird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = 5;
+                gravity = 10;
             }
+
+
+       
+        
         }
+
+
+
     }
 }      
