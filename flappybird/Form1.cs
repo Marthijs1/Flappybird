@@ -81,8 +81,12 @@ namespace Flappybird
             {
                 gravity = 10;
             }
-
-
+        }
+            private void endGame()
+            {
+                gametimer.Stop();
+                Score.Text += " Game over";
+            }
        
         
         }
