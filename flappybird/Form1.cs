@@ -62,7 +62,10 @@ namespace Flappybird
 
         private void gamekeyisup(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Space)
+            {
+                gravity = 5;
+            }
         }
     }
 }      
