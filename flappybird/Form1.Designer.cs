@@ -89,7 +89,8 @@ namespace Flappybird
             // gametimer
             // 
             this.gametimer.Enabled = true;
-            this.gametimer.Tick += new System.EventHandler(this.gametimer_Tick);
+            this.gametimer.Interval = 15;
+            this.gametimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
             // Form1
             // 

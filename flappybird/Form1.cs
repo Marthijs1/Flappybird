@@ -44,11 +44,6 @@ namespace Flappybird
 
         }
 
-        private void gametimer_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void gameTimerEvent(object sender, EventArgs e)
         {
             Flappybird.Top += gravity;
@@ -70,4 +65,4 @@ namespace Flappybird
 
         }
     }
-}
+}      
