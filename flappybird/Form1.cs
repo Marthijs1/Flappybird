@@ -47,6 +47,17 @@ namespace Flappybird
         private void gameTimerEvent(object sender, EventArgs e)
         {
             Flappybird.Top += gravity;
+            Pipedown.Left -= pipespeed;
+            Pipetop.Left -= pipespeed;
+
+            if (Pipedown.Left <-50)
+            {
+                Pipedown.Left = 800;
+            }
+            if(Pipetop.Left < -80)
+            {
+                Pipetop.Left = 950;
+            }
 
         }
 
