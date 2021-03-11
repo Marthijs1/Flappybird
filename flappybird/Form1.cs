@@ -16,8 +16,10 @@ namespace Flappybird
         int pipespeed = 8;
         int gravity = 5;
         int score = 0;
+        int life;
 
 
+        
 
         public Form1()
         {
@@ -44,6 +46,24 @@ namespace Flappybird
 
         }
 
+        void life_index(object sender, EventArgs e)
+        {
+            if(life==1)
+            {
+                lyf1.Image = Properties.Resources.life_white;
+            }
+            if(life==2)
+            {
+                lyf2.Image = Properties.Resources.life_white;
+            }
+            if(life==3)
+            {
+                lyf3.Image = Properties.Resources.life_white;
+               // gametimer.Stop();
+                //Score.Text += " Game over ";
+            }
+        }
+
         private void gameTimerEvent(object sender, EventArgs e)
         {
             Flappybird.Top += gravity;
@@ -51,17 +71,32 @@ namespace Flappybird
             Pipetop.Left -= pipespeed;
             Score.Text = score.ToString();
 
-            if (Pipedown.Left <-50)
+            if (Pipedown.Left < -50)
             {
                 Pipedown.Left = 800;
                 score++;
-              }
-             
-            if(Pipetop.Left < -80)
+            }
+
+            if (Pipetop.Left < -80)
             {
                 Pipetop.Left = 950;
                 score++;
             }
+
+            if (Flappybird.Bounds.IntersectsWith(Pipedown.Bounds) ||
+                Flappybird.Bounds.IntersectsWith(Pipetop.Bounds) ||
+                Flappybird.Bounds.IntersectsWith(Ground.Bounds) || Flappybird.Top < -25)
+
+
+            {
+                endGame();
+            }
+
+            if(score > 5)
+            {
+               pipespeed = 15;
+            }
+
 
         }
 
@@ -69,29 +104,35 @@ namespace Flappybird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -10;
+                gravity = -5;
             }
-
 
         }
 
-        private void gamekeyisup(object sender, KeyEventArgs e)
+
+            private void gamekeyisup(object sender, KeyEventArgs e)
+            {
+                if (e.KeyCode == Keys.Space)
+                {
+                    gravity = 5;
+                }
+            }
+
+
+        private void endGame()
         {
-            if (e.KeyCode == Keys.Space)
-            {
-                gravity = 10;
-            }
-        }
-            private void endGame()
-            {
-                gametimer.Stop();
-                Score.Text += " Game over";
-            }
-       
-        
+
+            gametimer.Stop();
+            Score.Text += " Game over ";
+
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
-}      
+}
+
+
+  
