@@ -54,7 +54,7 @@ namespace Flappybird
             // 
             this.Pipedown.BackColor = System.Drawing.Color.Transparent;
             this.Pipedown.Image = ((System.Drawing.Image)(resources.GetObject("Pipedown.Image")));
-            this.Pipedown.Location = new System.Drawing.Point(659, 233);
+            this.Pipedown.Location = new System.Drawing.Point(662, 249);
             this.Pipedown.Name = "Pipedown";
             this.Pipedown.Size = new System.Drawing.Size(100, 176);
             this.Pipedown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@ namespace Flappybird
             // 
             this.Pipetop.BackColor = System.Drawing.Color.Transparent;
             this.Pipetop.Image = ((System.Drawing.Image)(resources.GetObject("Pipetop.Image")));
-            this.Pipetop.Location = new System.Drawing.Point(659, 2);
+            this.Pipetop.Location = new System.Drawing.Point(599, 0);
             this.Pipetop.Name = "Pipetop";
             this.Pipetop.Size = new System.Drawing.Size(100, 116);
             this.Pipetop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +127,7 @@ namespace Flappybird
             // 
             // lyf1
             // 
+            this.lyf1.BackColor = System.Drawing.Color.Transparent;
             this.lyf1.Image = ((System.Drawing.Image)(resources.GetObject("lyf1.Image")));
             this.lyf1.Location = new System.Drawing.Point(207, 9);
             this.lyf1.Name = "lyf1";
@@ -137,6 +138,7 @@ namespace Flappybird
             // 
             // lyf3
             // 
+            this.lyf3.BackColor = System.Drawing.Color.Transparent;
             this.lyf3.Image = ((System.Drawing.Image)(resources.GetObject("lyf3.Image")));
             this.lyf3.Location = new System.Drawing.Point(269, 9);
             this.lyf3.Name = "lyf3";
@@ -147,6 +149,7 @@ namespace Flappybird
             // 
             // lyf2
             // 
+            this.lyf2.BackColor = System.Drawing.Color.Transparent;
             this.lyf2.Image = ((System.Drawing.Image)(resources.GetObject("lyf2.Image")));
             this.lyf2.Location = new System.Drawing.Point(238, 9);
             this.lyf2.Name = "lyf2";

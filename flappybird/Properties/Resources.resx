@@ -121,4 +121,13 @@
   <data name="life_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\life_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="photo-1533174072545-7a4b6ad7a6c3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1533174072545-7a4b6ad7a6c3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="220px-Flappy_Bird_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\220px-Flappy_Bird_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b49d978c9aff7fc7ff2294a8d0816863" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b49d978c9aff7fc7ff2294a8d0816863.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

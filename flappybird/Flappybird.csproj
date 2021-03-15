@@ -83,5 +83,14 @@
   <ItemGroup>
     <None Include="Resources\life_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1533174072545-7a4b6ad7a6c3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-Flappy_Bird_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b49d978c9aff7fc7ff2294a8d0816863.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
