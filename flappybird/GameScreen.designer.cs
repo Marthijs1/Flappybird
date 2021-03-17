@@ -42,10 +42,10 @@ namespace Flappybird
             this.lyf3 = new System.Windows.Forms.PictureBox();
             this.lyf2 = new System.Windows.Forms.PictureBox();
             this.Game_menu = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_restart = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_restart = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Pipedown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Flappybird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pipetop)).BeginInit();
@@ -170,34 +170,24 @@ namespace Flappybird
             this.Game_menu.Controls.Add(this.label4);
             this.Game_menu.Controls.Add(this.lbl_restart);
             this.Game_menu.Controls.Add(this.label2);
+            this.Game_menu.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
             this.Game_menu.Location = new System.Drawing.Point(216, 78);
             this.Game_menu.Name = "Game_menu";
             this.Game_menu.Size = new System.Drawing.Size(307, 200);
             this.Game_menu.TabIndex = 12;
             this.Game_menu.TabStop = false;
-            this.Game_menu.Text = "groupBox1";
+            this.Game_menu.Text = "Menu";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(93, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Game Over!!";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lbl_restart
-            // 
-            this.lbl_restart.AutoSize = true;
-            this.lbl_restart.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_restart.Location = new System.Drawing.Point(119, 113);
-            this.lbl_restart.Name = "lbl_restart";
-            this.lbl_restart.Size = new System.Drawing.Size(72, 24);
-            this.lbl_restart.TabIndex = 1;
-            this.lbl_restart.Text = "Restart";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(119, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 24);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Afsluiten";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -210,15 +200,28 @@ namespace Flappybird
             this.label4.TabIndex = 7;
             this.label4.Text = "Score : 0";
             // 
-            // label3
+            // lbl_restart
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(119, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 24);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Afsluiten";
+            this.lbl_restart.AutoSize = true;
+            this.lbl_restart.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_restart.Location = new System.Drawing.Point(119, 113);
+            this.lbl_restart.Name = "lbl_restart";
+            this.lbl_restart.Size = new System.Drawing.Size(72, 24);
+            this.lbl_restart.TabIndex = 1;
+            this.lbl_restart.Text = "Restart";
+            this.lbl_restart.Click += new System.EventHandler(this.lbl_restart_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(93, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Game Over!!";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // GameScreen
             // 
