@@ -1,7 +1,7 @@
 ﻿
 namespace Flappybird
 {
-    partial class Form1
+    partial class GameScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Flappybird
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.Pipedown = new System.Windows.Forms.PictureBox();
             this.Flappybird = new System.Windows.Forms.PictureBox();
             this.Pipetop = new System.Windows.Forms.PictureBox();

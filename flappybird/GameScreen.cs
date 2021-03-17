@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Flappybird
 {
-    public partial class Form1 : Form
+    public partial class GameScreen : Form
     {
 
         int pipespeed = 8;
@@ -21,7 +21,7 @@ namespace Flappybird
 
         
 
-        public Form1()
+        public GameScreen()
         {
             InitializeComponent();
         }
@@ -59,8 +59,8 @@ namespace Flappybird
             if(life==3)
             {
                 lyf3.Image = Properties.Resources.life_white;
-               // gametimer.Stop();
-                //Score.Text += " Game over ";
+                gametimer.Stop();
+                Score.Text += " Game over ";
             }
         }
 
@@ -104,7 +104,7 @@ namespace Flappybird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -5;
+                gravity = -10;
             }
 
         }
@@ -114,7 +114,7 @@ namespace Flappybird
             {
                 if (e.KeyCode == Keys.Space)
                 {
-                    gravity = 5;
+                    gravity = 10;
                 }
             }
 
