@@ -16,7 +16,7 @@ namespace Flappybird
         int pipespeed = 8;
         int gravity = 5;
         int score = 0;
-        int life;
+        int life = 4;
 
 
         
@@ -24,6 +24,7 @@ namespace Flappybird
         public GameScreen()
         {
             InitializeComponent();
+            Game_menu.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,23 +47,32 @@ namespace Flappybird
 
         }
 
-        void life_index(object sender, EventArgs e)
+        private void life_index()
         {
             if(life==1)
             {
                 lyf1.Image = Properties.Resources.life_white;
+                pipespeed = 5;
+
+
             }
             if(life==2)
             {
                 lyf2.Image = Properties.Resources.life_white;
+                pipespeed = 5;
+
             }
             if(life==3)
             {
                 lyf3.Image = Properties.Resources.life_white;
                 gametimer.Stop();
-                Score.Text += " Game over ";
+                Game_menu.Show(); 
             }
         }
+
+  
+
+
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
@@ -90,6 +100,8 @@ namespace Flappybird
 
             {
                 endGame();
+                life = life - 1;
+                life_index();
             }
 
             if(score > 5)
@@ -128,6 +140,11 @@ namespace Flappybird
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
