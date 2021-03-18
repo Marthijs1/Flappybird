@@ -42,11 +42,11 @@ namespace Flappybird
             this.lyf3 = new System.Windows.Forms.PictureBox();
             this.lyf2 = new System.Windows.Forms.PictureBox();
             this.Game_menu = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_restart = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Pipedown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Flappybird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pipetop)).BeginInit();
@@ -182,6 +182,16 @@ namespace Flappybird
             this.Game_menu.TabStop = false;
             this.Game_menu.Text = "Menu";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(291, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -227,16 +237,6 @@ namespace Flappybird
             this.label2.TabIndex = 0;
             this.label2.Text = "Game Over!!";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // GameScreen
             // 

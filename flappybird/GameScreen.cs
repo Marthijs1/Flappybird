@@ -13,7 +13,7 @@ namespace Flappybird
     public partial class GameScreen : Form
     {
 
-        int pipespeed = 8;
+        int pipespeed = 15;
         int gravity = 10;
         int score = 0;
         int life = 4;
