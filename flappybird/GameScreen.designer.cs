@@ -46,6 +46,7 @@ namespace Flappybird
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_restart = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Pipedown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Flappybird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pipetop)).BeginInit();
@@ -54,6 +55,7 @@ namespace Flappybird
             ((System.ComponentModel.ISupportInitialize)(this.lyf3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lyf2)).BeginInit();
             this.Game_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Pipedown
@@ -166,6 +168,8 @@ namespace Flappybird
             // 
             // Game_menu
             // 
+            this.Game_menu.BackColor = System.Drawing.Color.Silver;
+            this.Game_menu.Controls.Add(this.pictureBox1);
             this.Game_menu.Controls.Add(this.label3);
             this.Game_menu.Controls.Add(this.label4);
             this.Game_menu.Controls.Add(this.lbl_restart);
@@ -182,7 +186,7 @@ namespace Flappybird
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(119, 171);
+            this.label3.Location = new System.Drawing.Point(119, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 8;
@@ -199,6 +203,7 @@ namespace Flappybird
             this.label4.Size = new System.Drawing.Size(81, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Score : 0";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_restart
             // 
@@ -223,6 +228,16 @@ namespace Flappybird
             this.label2.Text = "Game Over!!";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(291, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +257,7 @@ namespace Flappybird
             this.Controls.Add(this.Pipedown);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flappy Bird Marthijs Ydema";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gamekeyisdown);
@@ -255,6 +271,7 @@ namespace Flappybird
             ((System.ComponentModel.ISupportInitialize)(this.lyf2)).EndInit();
             this.Game_menu.ResumeLayout(false);
             this.Game_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +293,7 @@ namespace Flappybird
         private System.Windows.Forms.Label lbl_restart;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

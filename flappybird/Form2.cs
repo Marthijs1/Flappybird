@@ -32,6 +32,8 @@ namespace Flappybird
             GameScreen gameWindow = new GameScreen();
 
             gameWindow.Show();
+
+            this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

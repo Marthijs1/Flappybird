@@ -14,7 +14,7 @@ namespace Flappybird
     {
 
         int pipespeed = 8;
-        int gravity = 5;
+        int gravity = 10;
         int score = 0;
         int life = 4;
 
@@ -54,6 +54,7 @@ namespace Flappybird
                 lyf1.Image = Properties.Resources.life_white;
                 pipespeed = 5;
                 Game_menu.Show();
+                    
 
 
             }
@@ -121,7 +122,7 @@ namespace Flappybird
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -10;
+                gravity = -11;
             }
 
         }
@@ -131,7 +132,7 @@ namespace Flappybird
             {
                 if (e.KeyCode == Keys.Space)
                 {
-                    gravity = 10;
+                    gravity = 11;
                 }
             }
 
@@ -158,7 +159,9 @@ namespace Flappybird
         {
             Game_menu.Hide();
             Flappybird.Location = new Point(16, 152);
+            gametimer.Start();
             Score.Text = "Score: 0";
+            pipespeed = 5;
       
             
         }
@@ -166,6 +169,11 @@ namespace Flappybird
         private void label3_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
