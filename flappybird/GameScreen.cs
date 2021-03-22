@@ -13,7 +13,7 @@ namespace Flappybird
     public partial class GameScreen : Form
     {
 
-        int pipespeed = 15;
+        int pipespeed = 20;
         int gravity = 10;
         int score = 0;
         int life = 4;
@@ -52,7 +52,7 @@ namespace Flappybird
             if(life==1)
             {
                 lyf1.Image = Properties.Resources.life_white;
-                pipespeed = 10;
+                pipespeed = 15;
                 gametimer.Stop();
 
                 End EndWindow = new End();
@@ -66,14 +66,14 @@ namespace Flappybird
             if (life==2)
             {
                 lyf2.Image = Properties.Resources.life_white;
-                pipespeed = 10;
+                pipespeed = 15;
                 Game_menu.Show();
                
             }
             if(life==3)
             {
                 lyf3.Image = Properties.Resources.life_white;
-                pipespeed = 10;
+                pipespeed = 15;
                 Game_menu.Show();
                 
 
@@ -188,6 +188,11 @@ namespace Flappybird
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
         }

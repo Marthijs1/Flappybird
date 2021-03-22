@@ -29,16 +29,21 @@ namespace Flappybird
 
         private void LoadGame(object sender, EventArgs e)
         {
-            GameScreen gameWindow = new GameScreen();
-
-            gameWindow.Show();
-
-            this.Hide();
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadGame1(object sender, EventArgs e)
+        {
+            GameScreen gameWindow = new GameScreen();
+
+            gameWindow.Show();
+
+            this.Hide();
         }
     }
 }
