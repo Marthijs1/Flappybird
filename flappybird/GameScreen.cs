@@ -116,14 +116,30 @@ namespace Flappybird
 
             if(score > 5)
             {
-               pipespeed = 15;
+               pipespeed = 25;
+            }
+            if (score > 10)
+            {
+                pipespeed = 30;
+            }
+            if (score > 15)
+            {
+                pipespeed = 35;
+            }
+            if (score > 20)
+            {
+                pipespeed = 40;
+            }
+            if (score > 25)
+            {
+                pipespeed = 45;
             }
 
 
         }
 
-       // private void ResetGame();
-            
+        // private void ResetGame();
+
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
         {

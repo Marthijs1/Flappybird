@@ -62,7 +62,7 @@ namespace Flappybird
             // 
             this.Pipedown.BackColor = System.Drawing.Color.Transparent;
             this.Pipedown.Image = ((System.Drawing.Image)(resources.GetObject("Pipedown.Image")));
-            this.Pipedown.Location = new System.Drawing.Point(662, 249);
+            this.Pipedown.Location = new System.Drawing.Point(673, 273);
             this.Pipedown.Name = "Pipedown";
             this.Pipedown.Size = new System.Drawing.Size(100, 176);
             this.Pipedown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +85,7 @@ namespace Flappybird
             // 
             this.Pipetop.BackColor = System.Drawing.Color.Transparent;
             this.Pipetop.Image = ((System.Drawing.Image)(resources.GetObject("Pipetop.Image")));
-            this.Pipetop.Location = new System.Drawing.Point(599, 0);
+            this.Pipetop.Location = new System.Drawing.Point(605, -8);
             this.Pipetop.Name = "Pipetop";
             this.Pipetop.Size = new System.Drawing.Size(100, 116);
             this.Pipetop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +168,7 @@ namespace Flappybird
             // 
             // Game_menu
             // 
-            this.Game_menu.BackColor = System.Drawing.Color.DarkBlue;
+            this.Game_menu.BackColor = System.Drawing.Color.Transparent;
             this.Game_menu.Controls.Add(this.pictureBox1);
             this.Game_menu.Controls.Add(this.label3);
             this.Game_menu.Controls.Add(this.label4);
