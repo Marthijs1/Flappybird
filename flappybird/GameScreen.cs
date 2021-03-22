@@ -52,24 +52,31 @@ namespace Flappybird
             if(life==1)
             {
                 lyf1.Image = Properties.Resources.life_white;
-                pipespeed = 5;
-                Game_menu.Show();
-                    
+                pipespeed = 10;
+               // Game_menu.Show();
+                gametimer.Stop();
 
+                End EndWindow = new End();
+
+                EndWindow.Show();
+
+                this.Hide();
 
             }
-            if(life==2)
+            if (life==2)
             {
                 lyf2.Image = Properties.Resources.life_white;
-                pipespeed = 5;
+                pipespeed = 10;
                 Game_menu.Show();
-
+               
             }
             if(life==3)
             {
                 lyf3.Image = Properties.Resources.life_white;
-                gametimer.Stop();
-                Game_menu.Show(); 
+                pipespeed = 10;
+                Game_menu.Show();
+                
+
             }
         }
 
@@ -93,7 +100,7 @@ namespace Flappybird
             if (Pipetop.Left < -80)
             {
                 Pipetop.Left = 950;
-                score++;
+               
             }
 
             if (Flappybird.Bounds.IntersectsWith(Pipedown.Bounds) ||
@@ -141,7 +148,11 @@ namespace Flappybird
         {
 
             gametimer.Stop();
-            Score.Text += " Game over ";
+
+            //End EndWindow = new End();
+
+           // EndWindow.Show();
+
 
         }
 

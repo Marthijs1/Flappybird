@@ -137,7 +137,7 @@ namespace Flappybird
             // 
             this.lyf1.BackColor = System.Drawing.Color.Transparent;
             this.lyf1.Image = ((System.Drawing.Image)(resources.GetObject("lyf1.Image")));
-            this.lyf1.Location = new System.Drawing.Point(207, 9);
+            this.lyf1.Location = new System.Drawing.Point(238, 9);
             this.lyf1.Name = "lyf1";
             this.lyf1.Size = new System.Drawing.Size(25, 30);
             this.lyf1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@ namespace Flappybird
             // 
             this.lyf2.BackColor = System.Drawing.Color.Transparent;
             this.lyf2.Image = ((System.Drawing.Image)(resources.GetObject("lyf2.Image")));
-            this.lyf2.Location = new System.Drawing.Point(238, 9);
+            this.lyf2.Location = new System.Drawing.Point(207, 9);
             this.lyf2.Name = "lyf2";
             this.lyf2.Size = new System.Drawing.Size(25, 30);
             this.lyf2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
