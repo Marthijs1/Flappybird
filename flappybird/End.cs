@@ -25,5 +25,10 @@ namespace Flappybird
 
             this.Hide();
         }
+
+        private void eindscore_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

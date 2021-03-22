@@ -70,6 +70,7 @@ namespace Flappybird
             this.eindscore.Size = new System.Drawing.Size(63, 24);
             this.eindscore.TabIndex = 2;
             this.eindscore.Text = "label2";
+            this.eindscore.Click += new System.EventHandler(this.eindscore_Click);
             // 
             // pictureBox2
             // 

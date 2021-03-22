@@ -53,7 +53,6 @@ namespace Flappybird
             {
                 lyf1.Image = Properties.Resources.life_white;
                 pipespeed = 10;
-               // Game_menu.Show();
                 gametimer.Stop();
 
                 End EndWindow = new End();
@@ -61,6 +60,7 @@ namespace Flappybird
                 EndWindow.Show();
 
                 this.Hide();
+
 
             }
             if (life==2)
@@ -149,12 +149,16 @@ namespace Flappybird
 
             gametimer.Stop();
 
+
             //End EndWindow = new End();
 
            // EndWindow.Show();
 
 
         }
+
+       
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -173,6 +177,7 @@ namespace Flappybird
             gametimer.Start();
             Score.Text = "Score: 0";
             pipespeed = 5;
+            
       
             
         }

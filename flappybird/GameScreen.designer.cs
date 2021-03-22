@@ -137,7 +137,7 @@ namespace Flappybird
             // 
             this.lyf1.BackColor = System.Drawing.Color.Transparent;
             this.lyf1.Image = ((System.Drawing.Image)(resources.GetObject("lyf1.Image")));
-            this.lyf1.Location = new System.Drawing.Point(238, 9);
+            this.lyf1.Location = new System.Drawing.Point(207, 9);
             this.lyf1.Name = "lyf1";
             this.lyf1.Size = new System.Drawing.Size(25, 30);
             this.lyf1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@ namespace Flappybird
             // 
             this.lyf2.BackColor = System.Drawing.Color.Transparent;
             this.lyf2.Image = ((System.Drawing.Image)(resources.GetObject("lyf2.Image")));
-            this.lyf2.Location = new System.Drawing.Point(207, 9);
+            this.lyf2.Location = new System.Drawing.Point(238, 9);
             this.lyf2.Name = "lyf2";
             this.lyf2.Size = new System.Drawing.Size(25, 30);
             this.lyf2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +168,7 @@ namespace Flappybird
             // 
             // Game_menu
             // 
-            this.Game_menu.BackColor = System.Drawing.Color.Silver;
+            this.Game_menu.BackColor = System.Drawing.Color.DarkBlue;
             this.Game_menu.Controls.Add(this.pictureBox1);
             this.Game_menu.Controls.Add(this.label3);
             this.Game_menu.Controls.Add(this.label4);
@@ -196,6 +196,7 @@ namespace Flappybird
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(119, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 24);
@@ -219,6 +220,7 @@ namespace Flappybird
             // 
             this.lbl_restart.AutoSize = true;
             this.lbl_restart.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_restart.ForeColor = System.Drawing.Color.White;
             this.lbl_restart.Location = new System.Drawing.Point(119, 113);
             this.lbl_restart.Name = "lbl_restart";
             this.lbl_restart.Size = new System.Drawing.Size(72, 24);
