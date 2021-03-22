@@ -176,7 +176,7 @@ namespace Flappybird
             Flappybird.Location = new Point(16, 152);
             gametimer.Start();
             Score.Text = "Score: 0";
-            pipespeed = 5;
+            pipespeed = 15;
             
       
             
