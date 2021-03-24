@@ -13,9 +13,10 @@ namespace Flappybird
     public partial class GameScreen : Form
     {
 
-        int pipespeed = 20;
+        int pipespeed = 10;
         int gravity = 10;
         int score = 0;
+        int totalscore = 0;
         int life = 4;
 
 
@@ -55,7 +56,7 @@ namespace Flappybird
                 pipespeed = 15;
                 gametimer.Stop();
 
-                End EndWindow = new End();
+                End EndWindow = new End(totalscore);
 
                 EndWindow.Show();
 
@@ -116,23 +117,23 @@ namespace Flappybird
 
             if(score > 5)
             {
-               pipespeed = 25;
+               pipespeed = 15;
             }
             if (score > 10)
             {
-                pipespeed = 30;
+                pipespeed = 20;
             }
             if (score > 15)
             {
-                pipespeed = 35;
+                pipespeed = 25;
             }
             if (score > 20)
             {
-                pipespeed = 40;
+                pipespeed = 30;
             }
             if (score > 25)
             {
-                pipespeed = 45;
+                pipespeed = 35;
             }
 
 
@@ -164,16 +165,19 @@ namespace Flappybird
         {
 
             gametimer.Stop();
+            totalscore = totalscore + score;
+            score = 0;
+
 
 
             //End EndWindow = new End();
 
-           // EndWindow.Show();
+            // EndWindow.Show();
 
 
         }
 
-       
+
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -193,8 +197,7 @@ namespace Flappybird
             gametimer.Start();
             Score.Text = "Score: 0";
             pipespeed = 15;
-            
-      
+           
             
         }
 

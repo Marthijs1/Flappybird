@@ -12,9 +12,10 @@ namespace Flappybird
 {
     public partial class End : Form
     {
-        public End()
+        public End(int totalscore)
         {
             InitializeComponent();
+            eindscore.Text = totalscore.ToString();
         }
 
         private void RestartGame(object sender, EventArgs e)
