@@ -21,5 +21,14 @@ namespace Flappybird
         {
             Close();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Form2 gameWindow = new Form2();
+
+            gameWindow.Show();
+
+            this.Hide();
+        }
     }
 }
