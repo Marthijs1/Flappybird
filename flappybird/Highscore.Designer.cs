@@ -58,11 +58,12 @@ namespace Flappybird
             this.tbscore.Name = "tbscore";
             this.tbscore.Size = new System.Drawing.Size(326, 317);
             this.tbscore.TabIndex = 6;
+            this.tbscore.TextChanged += new System.EventHandler(this.tbscore_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
-            this.textBox2.Location = new System.Drawing.Point(416, 12);
+            this.textBox2.Location = new System.Drawing.Point(423, 12);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(326, 317);
@@ -72,7 +73,7 @@ namespace Flappybird
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 335);
+            this.pictureBox5.Location = new System.Drawing.Point(-35, 345);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(273, 127);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

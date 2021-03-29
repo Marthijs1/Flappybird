@@ -6,29 +6,68 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace Flappybird
 {
     public partial class Highscore : Form
     {
-        public Highscore()
+        private MySqlConnection connection;
+
+        public Highscore(int id)
+
         {
             InitializeComponent();
+
+
         }
+        private void InitializeDatabaseConnection()
+        {
+            string server = "localhost";
+            string database = "flappy bird";
+            string dbUsername = "root";
+            string dbPassword = "";
+
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + dbUsername + ";" + "PASSWORD=" + dbPassword + ";";
+
+
+        }
+        private bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                return false;
+            }
+        }
+
+
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Close();
+        Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+    private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Form2 gameWindow = new Form2();
+        Form2 gameWindow = new Form2();
 
-            gameWindow.Show();
+        gameWindow.Show();
 
-            this.Hide();
+        this.Hide();
+
+
         }
-    }
+
+        private void tbscore_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }   
 }
