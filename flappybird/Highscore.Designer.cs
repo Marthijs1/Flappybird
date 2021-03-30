@@ -35,11 +35,11 @@ namespace Flappybird
             this.NamePlayer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Positite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnLoad = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,44 +59,48 @@ namespace Flappybird
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Position,
             this.NamePlayer,
             this.Date,
-            this.Time,
-            this.Positite});
+            this.Time});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 59);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(776, 311);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
+            
             // NamePlayer
             // 
+            this.NamePlayer.DisplayIndex = 0;
             this.NamePlayer.Text = "Name";
             // 
             // Date
             // 
+            this.Date.DisplayIndex = 1;
             this.Date.Text = "Date";
             // 
             // Time
             // 
+            this.Time.DisplayIndex = 2;
             this.Time.Text = "Positie";
             // 
-            // Positite
+            // Position
             // 
-            this.Positite.Text = "Positie";
+            this.Position.DisplayIndex = 3;
+            this.Position.Text = "position";
             // 
-            // pictureBox5
+            // btnLoad
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(2, 388);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(127, 59);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(2, 388);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(127, 59);
+            this.btnLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLoad.TabIndex = 8;
+            this.btnLoad.TabStop = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoadClick);
             // 
             // pictureBox1
             // 
@@ -117,13 +121,13 @@ namespace Flappybird
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Highscore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Highscore";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -136,8 +140,8 @@ namespace Flappybird
         private System.Windows.Forms.ColumnHeader NamePlayer;
         private System.Windows.Forms.ColumnHeader Date;
         private System.Windows.Forms.ColumnHeader Time;
-        private System.Windows.Forms.ColumnHeader Positite;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ColumnHeader Position;
+        private System.Windows.Forms.PictureBox btnLoad;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
