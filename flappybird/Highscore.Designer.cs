@@ -31,11 +31,16 @@ namespace Flappybird
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tbscore = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.NamePlayer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Positite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -50,36 +55,58 @@ namespace Flappybird
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // tbscore
+            // listView1
             // 
-            this.tbscore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
-            this.tbscore.Location = new System.Drawing.Point(12, 12);
-            this.tbscore.Multiline = true;
-            this.tbscore.Name = "tbscore";
-            this.tbscore.Size = new System.Drawing.Size(326, 317);
-            this.tbscore.TabIndex = 6;
-            this.tbscore.TextChanged += new System.EventHandler(this.tbscore_TextChanged);
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NamePlayer,
+            this.Date,
+            this.Time,
+            this.Positite});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 59);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(776, 311);
+            this.listView1.TabIndex = 12;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox2
+            // NamePlayer
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
-            this.textBox2.Location = new System.Drawing.Point(423, 12);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 317);
-            this.textBox2.TabIndex = 7;
+            this.NamePlayer.Text = "Name";
+            // 
+            // Date
+            // 
+            this.Date.Text = "Date";
+            // 
+            // Time
+            // 
+            this.Time.Text = "Positie";
+            // 
+            // Positite
+            // 
+            this.Positite.Text = "Positie";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(-35, 345);
+            this.pictureBox5.Location = new System.Drawing.Point(2, 388);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(273, 127);
+            this.pictureBox5.Size = new System.Drawing.Size(127, 59);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(259, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(279, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Highscore
             // 
@@ -88,25 +115,29 @@ namespace Flappybird
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.tbscore);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Highscore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Highscore";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox tbscore;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader NamePlayer;
+        private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.ColumnHeader Time;
+        private System.Windows.Forms.ColumnHeader Positite;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

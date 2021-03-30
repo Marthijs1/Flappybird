@@ -15,7 +15,7 @@ namespace Flappybird
     {
         private MySqlConnection connection;
 
-        public Highscore(int id)
+        public Highscore(int totolscore)
 
         {
             InitializeComponent();
@@ -31,6 +31,12 @@ namespace Flappybird
 
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + dbUsername + ";" + "PASSWORD=" + dbPassword + ";";
+
+
+
+
+
+
 
 
         }
@@ -67,7 +73,7 @@ namespace Flappybird
 
         private void tbscore_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }   
 }
