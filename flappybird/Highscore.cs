@@ -31,11 +31,7 @@ namespace Flappybird
                     allDevices[0][i],
                     allDevices[1][i],
                     allDevices[2][i],
-
-
-
-
-
+                    allDevices[3][i],
                 });
 
                 listView1.Items.Add(newDeviceItem);
@@ -103,6 +99,7 @@ namespace Flappybird
             resultList[0] = new List<string>();
             resultList[1] = new List<string>();
             resultList[2] = new List<string>();
+            resultList[3] = new List<string>();
 
 
             if (this.OpenConnection() == true)
@@ -115,8 +112,9 @@ namespace Flappybird
                 while (dataReader.Read())
                 {
                     resultList[0].Add(dataReader["Position"] + "");
-                    resultList[1].Add(dataReader["Name"] + "");
-                    resultList[2].Add(dataReader["DateTime"] + "");
+                    resultList[1].Add(dataReader["Score"] + "");
+                    resultList[2].Add(dataReader["Name"] + "");
+                    resultList[3].Add(dataReader["DateTime"] + "");
 
 
 
@@ -141,17 +139,6 @@ namespace Flappybird
             Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void tbscore_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLoadClick(object sender, EventArgs e)
         {
@@ -180,7 +167,13 @@ namespace Flappybird
             //  });
 
 
-    }    } 
+    }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    } 
 }
         //   private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         

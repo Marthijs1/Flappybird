@@ -32,14 +32,12 @@ namespace Flappybird
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.NamePlayer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnLoad = new System.Windows.Forms.PictureBox();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Score = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,57 +58,49 @@ namespace Flappybird
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Position,
-            this.NamePlayer,
-            this.Date,
-            this.Time});
+            this.Score,
+            this.Name,
+            this.DateTime});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 59);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(776, 311);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            
-            // NamePlayer
-            // 
-            this.NamePlayer.DisplayIndex = 0;
-            this.NamePlayer.Text = "Name";
-            // 
-            // Date
-            // 
-            this.Date.DisplayIndex = 1;
-            this.Date.Text = "Date";
-            // 
-            // Time
-            // 
-            this.Time.DisplayIndex = 2;
-            this.Time.Text = "Positie";
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Position
             // 
-            this.Position.DisplayIndex = 3;
             this.Position.Text = "position";
+            this.Position.Width = 102;
             // 
-            // btnLoad
+            // Name
             // 
-            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(2, 388);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(127, 59);
-            this.btnLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLoad.TabIndex = 8;
-            this.btnLoad.TabStop = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoadClick);
+            this.Name.DisplayIndex = 1;
+            this.Name.Text = "Name";
+            this.Name.Width = 140;
+            // 
+            // DateTime
+            // 
+            this.DateTime.DisplayIndex = 2;
+            this.DateTime.Text = "Datum en Tijd";
+            this.DateTime.Width = 150;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(259, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(285, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // Score
+            // 
+            this.Score.DisplayIndex = 3;
+            this.Score.Text = "Score";
             // 
             // Highscore
             // 
@@ -121,13 +111,11 @@ namespace Flappybird
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.pictureBox3);
-            this.Name = "Highscore";
+          //  this.Name = "Highscore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Highscore";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -137,11 +125,10 @@ namespace Flappybird
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader NamePlayer;
-        private System.Windows.Forms.ColumnHeader Date;
-        private System.Windows.Forms.ColumnHeader Time;
+        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader DateTime;
         private System.Windows.Forms.ColumnHeader Position;
-        private System.Windows.Forms.PictureBox btnLoad;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ColumnHeader Score;
     }
 }
