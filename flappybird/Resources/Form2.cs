@@ -12,6 +12,7 @@ namespace Flappybird
 {
     public partial class Form2 : Form
     {
+        //Dit is het beginform, hier gebeurt niet heel veel alleen maar doorkoppelingen naar andere forms.
         public Form2()
         {
             InitializeComponent();

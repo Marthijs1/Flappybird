@@ -13,6 +13,7 @@ namespace Flappybird
     public partial class End : Form
     {
         public End(int totalscore)
+            //Hier wordt de totaalscore weergeven
         {
             InitializeComponent();
             eindscore.Text = totalscore.ToString();

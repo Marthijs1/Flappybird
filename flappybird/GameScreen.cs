@@ -14,7 +14,7 @@ namespace Flappybird
 
     public partial class GameScreen : Form
     {
-
+        //hier maak ik de int's aan voor mijn project.
         int pipespeed = 10;
         int gravity = 10;
         int score = 0;
@@ -37,6 +37,7 @@ namespace Flappybird
 
         private void InitializeDatabaseConnection()
         {
+            // Database connectie aanmaken
             string server = "localhost";
             string database = "flappy bird";
             string dbUsername = "root";
@@ -118,6 +119,7 @@ namespace Flappybird
         {
             if (life == 1)
             {
+                //Hierin maak ik de levens aan, en als je score groter is dan de laagste in de database, moet je je naam invullen.
                 lyf1.Image = Properties.Resources.life_white;
                 pipespeed = 15;
                 gametimer.Stop();
@@ -163,6 +165,7 @@ namespace Flappybird
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
+            // Dit is het event om de game te starten, met de random pijpen, en wanneer Flappy Bird dood gaat. Ook staat hierin dat Flappy Bird sneller gaat als de score hoger wordt.
             Flappybird.Top += gravity;
             Pipedown.Left -= pipespeed;
             Pipetop.Left -= pipespeed;
@@ -224,6 +227,7 @@ namespace Flappybird
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
         {
+            //Hier staat hoe snel flappy bird omhoog en naar beneden gaat
             if (e.KeyCode == Keys.Space)
             {
                 gravity = -11;
@@ -234,6 +238,8 @@ namespace Flappybird
 
         private void gamekeyisup(object sender, KeyEventArgs e)
         {
+
+            //Hier staat hoe snel flappy bird omhoog en naar beneden gaat
             if (e.KeyCode == Keys.Space)
             {
                 gravity = 11;
@@ -243,16 +249,10 @@ namespace Flappybird
 
         private void endGame()
         {
-
+            // Hier stop de game
             gametimer.Stop();
             totalscore = totalscore + score;
             score = 0;
-
-
-
-            //End EndWindow = new End();
-
-            // EndWindow.Show();
 
 
         }
@@ -272,6 +272,7 @@ namespace Flappybird
 
         private void lbl_restart_Click(object sender, EventArgs e)
         {
+            //De restart button, hierin start het spel over
             Game_menu.Hide();
             Flappybird.Location = new Point(16, 152);
             gametimer.Start();
@@ -323,7 +324,7 @@ namespace Flappybird
         private void addscore()
 
         {
-
+            //Hier word de score en de naam van de speler naar de database gezet.
             string insertQuerry = "INSERT INTO score(Name, Score) VALUES (@Name, " + totalscore +")";
 
 
@@ -357,6 +358,7 @@ namespace Flappybird
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            // Wordt de score gepushed, als je op de knop klikt
             addscore();
         }
 

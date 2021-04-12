@@ -19,6 +19,7 @@ namespace Flappybird
         public Highscore()
 
         {
+            //Lijst opgehaald uit de database
             InitializeComponent();
 
             InitializeDatabaseConnection();
@@ -41,6 +42,7 @@ namespace Flappybird
 
         private void InitializeDatabaseConnection()
         {
+            //Database connectie
             string server = "localhost";
             string database = "flappy bird";
             string dbUsername = "root";
@@ -91,9 +93,9 @@ namespace Flappybird
 
         public List<string>[] GetAllscores()
         {
-
+            //Wordt alles nog een keer opgehaald uit de database
             string sqlQuery = "SELECT * FROM score";
-            //   new DateTime = DateTime;
+            
 
             List<string>[] resultList = new List<string>[6];
             resultList[0] = new List<string>();
