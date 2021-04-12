@@ -45,5 +45,15 @@ namespace Flappybird
 
             this.Hide();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Highscore gameWindow = new Highscore();
+
+            gameWindow.Show();
+
+            this.Hide();
+        }
     }
-}
+    }
+

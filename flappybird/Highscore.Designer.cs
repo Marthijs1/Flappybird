@@ -32,11 +32,10 @@ namespace Flappybird
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Score = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Score = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,10 +56,9 @@ namespace Flappybird
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Position,
-            this.Score,
             this.Name,
-            this.DateTime});
+            this.DateTime,
+            this.Score});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 59);
             this.listView1.Name = "listView1";
@@ -70,20 +68,20 @@ namespace Flappybird
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // Position
+            // Score
             // 
-            this.Position.Text = "position";
-            this.Position.Width = 102;
+            this.Score.DisplayIndex = 2;
+            this.Score.Text = "Score";
             // 
             // Name
             // 
-            this.Name.DisplayIndex = 1;
+            this.Name.DisplayIndex = 0;
             this.Name.Text = "Name";
             this.Name.Width = 140;
             // 
             // DateTime
             // 
-            this.DateTime.DisplayIndex = 2;
+            this.DateTime.DisplayIndex = 1;
             this.DateTime.Text = "Datum en Tijd";
             this.DateTime.Width = 150;
             // 
@@ -97,11 +95,6 @@ namespace Flappybird
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // Score
-            // 
-            this.Score.DisplayIndex = 3;
-            this.Score.Text = "Score";
-            // 
             // Highscore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,7 +105,7 @@ namespace Flappybird
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox3);
-          //  this.Name = "Highscore";
+           // this.Name = "Highscore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Highscore";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -127,7 +120,6 @@ namespace Flappybird
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader DateTime;
-        private System.Windows.Forms.ColumnHeader Position;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ColumnHeader Score;
     }

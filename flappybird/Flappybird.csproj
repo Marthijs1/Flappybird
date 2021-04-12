@@ -110,6 +110,12 @@
     <Compile Include="Highscore.Designer.cs">
       <DependentUpon>Highscore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Highscore1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Highscore1.Designer.cs">
+      <DependentUpon>Highscore1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Form2.cs">
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Highscore.resx">
       <DependentUpon>Highscore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Highscore1.resx">
+      <DependentUpon>Highscore1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

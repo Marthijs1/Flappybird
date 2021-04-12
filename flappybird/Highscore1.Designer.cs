@@ -30,20 +30,20 @@ namespace Flappybird
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbname
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
-            this.textBox1.Location = new System.Drawing.Point(309, 241);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 119);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
+            this.tbname.Location = new System.Drawing.Point(309, 241);
+            this.tbname.Multiline = true;
+            this.tbname.Name = "tbname";
+            this.tbname.Size = new System.Drawing.Size(169, 119);
+            this.tbname.TabIndex = 0;
+         
             // 
             // label1
             // 
@@ -63,9 +63,9 @@ namespace Flappybird
             this.label2.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(256, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 24);
+            this.label2.Size = new System.Drawing.Size(268, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Gefeliciteerd uw zit in de top 10!!";
+            this.label2.Text = "Gefeliciteerd u zit in de top 10!!";
             // 
             // Highscore1
             // 
@@ -75,7 +75,7 @@ namespace Flappybird
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbname);
             this.Name = "Highscore1";
             this.Text = "Highscore1";
             this.ResumeLayout(false);
@@ -85,7 +85,7 @@ namespace Flappybird
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

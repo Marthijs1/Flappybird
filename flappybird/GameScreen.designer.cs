@@ -42,11 +42,17 @@ namespace Flappybird
             this.lyf3 = new System.Windows.Forms.PictureBox();
             this.lyf2 = new System.Windows.Forms.PictureBox();
             this.Game_menu = new System.Windows.Forms.GroupBox();
+            this.highscore2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_restart = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbname = new System.Windows.Forms.TextBox();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
             ((System.ComponentModel.ISupportInitialize)(this.Pipedown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Flappybird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pipetop)).BeginInit();
@@ -56,6 +62,8 @@ namespace Flappybird
             ((System.ComponentModel.ISupportInitialize)(this.lyf2)).BeginInit();
             this.Game_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Pipedown
@@ -131,7 +139,6 @@ namespace Flappybird
             this.label1.Size = new System.Drawing.Size(77, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Levens :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lyf1
             // 
@@ -169,6 +176,7 @@ namespace Flappybird
             // Game_menu
             // 
             this.Game_menu.BackColor = System.Drawing.Color.Transparent;
+            this.Game_menu.Controls.Add(this.highscore2);
             this.Game_menu.Controls.Add(this.pictureBox1);
             this.Game_menu.Controls.Add(this.label3);
             this.Game_menu.Controls.Add(this.label4);
@@ -177,10 +185,17 @@ namespace Flappybird
             this.Game_menu.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
             this.Game_menu.Location = new System.Drawing.Point(216, 78);
             this.Game_menu.Name = "Game_menu";
-            this.Game_menu.Size = new System.Drawing.Size(307, 200);
+            this.Game_menu.Size = new System.Drawing.Size(307, 191);
             this.Game_menu.TabIndex = 12;
             this.Game_menu.TabStop = false;
             this.Game_menu.Text = "Menu";
+            // 
+            // highscore2
+            // 
+            this.highscore2.Location = new System.Drawing.Point(68, 195);
+            this.highscore2.Name = "highscore2";
+            this.highscore2.Size = new System.Drawing.Size(200, 100);
+            this.highscore2.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -191,7 +206,6 @@ namespace Flappybird
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
             // label3
             // 
@@ -203,7 +217,6 @@ namespace Flappybird
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "Afsluiten";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -215,7 +228,6 @@ namespace Flappybird
             this.label4.Size = new System.Drawing.Size(81, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Score : 0";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_restart
             // 
@@ -227,7 +239,7 @@ namespace Flappybird
             this.lbl_restart.Size = new System.Drawing.Size(72, 24);
             this.lbl_restart.TabIndex = 1;
             this.lbl_restart.Text = "Restart";
-            this.lbl_restart.Click += new System.EventHandler(this.lbl_restart_Click);
+            this.lbl_restart.Click += new System.EventHandler(this.lbl_restart_Click_2);
             // 
             // label2
             // 
@@ -239,7 +251,47 @@ namespace Flappybird
             this.label2.Size = new System.Drawing.Size(114, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Game Over!!";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.tbname);
+            this.panel1.Location = new System.Drawing.Point(269, 293);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 14;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(70, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ranchers", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(18, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Vul hier uw naam in";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // tbname
+            // 
+            this.tbname.Location = new System.Drawing.Point(50, 27);
+            this.tbname.Name = "tbname";
+            this.tbname.Size = new System.Drawing.Size(100, 20);
+            this.tbname.TabIndex = 0;
+            this.tbname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // GameScreen
             // 
@@ -248,6 +300,7 @@ namespace Flappybird
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(197)))), ((int)(((byte)(206)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Game_menu);
             this.Controls.Add(this.lyf2);
             this.Controls.Add(this.lyf3);
@@ -262,7 +315,6 @@ namespace Flappybird
             this.Name = "GameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flappy Bird Marthijs Ydema";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gamekeyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gamekeyisup);
             ((System.ComponentModel.ISupportInitialize)(this.Pipedown)).EndInit();
@@ -275,6 +327,9 @@ namespace Flappybird
             this.Game_menu.ResumeLayout(false);
             this.Game_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +352,12 @@ namespace Flappybird
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel highscore2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbname;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
     }
 }
 
